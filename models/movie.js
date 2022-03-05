@@ -1,6 +1,6 @@
-// COMP229 - Mid-Term Test
-// Laura Amangeldiyeva - 301167661
-// 2022-03-01
+// <!-- // COMP229 - Mid-Term Test
+// // Laura Amangeldiyeva - 301167661
+// // 2022-03-01 -->
 let mongoose = require('mongoose');
 
 // Create a model class
