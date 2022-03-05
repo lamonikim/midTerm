@@ -55,7 +55,7 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
 
     // ADD YOUR CODE HERE
-    let newBook = Book({
+    let newMovie = Movie({
         "Title": req.body.Title,
         "Synopsis":req.body.Synopsis,
         "Year":req.body.Year,
@@ -104,7 +104,8 @@ module.exports.processEditPage = (req, res, next) => {
     
     // ADD YOUR CODE HERE
     let id = req.params.id;
-    let updateBook = Movie({
+    let updateMovie = Movie({
+        "_id": id,
         "Title": req.body.Title,
         "Synopsis":req.body.Synopsis,
         "Year":req.body.Year,
