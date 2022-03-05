@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// COMP229 - Mid-Term Test
-// Laura Amangeldiyeva - 301167661
-// 2022-03-01
+
 /**
  * Module dependencies.
  */
