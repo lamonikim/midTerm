@@ -48,7 +48,7 @@ module.exports.details = (req, res, next) => {
 module.exports.displayAddPage = (req, res, next) => {
     
     // ADD YOUR CODE HERE        
-    res.render('movie/add', {title: 'Add a new Movie'});   
+    res.render('movie/add_edit', {title: 'Add a new Movie'});   
 }
 
 // Processes the data submitted from the Add form to create a new movie
@@ -56,11 +56,11 @@ module.exports.processAddPage = (req, res, next) => {
 
     // ADD YOUR CODE HERE
     let newMovie = Movie({
-        "Title": req.body.Title,
-        "Synopsis":req.body.Synopsis,
-        "Year":req.body.Year,
-        "Director":req.body.Director,
-        "Genre":req.body.Genre
+        Title: req.body.Title,
+        Synopsis:req.body.Synopsis,
+        Year:req.body.Year,
+        Director:req.body.Director,
+        Genre:req.body.Genre
     });
 
     Movie.create(newMovie, (err, Movie) =>{
@@ -92,7 +92,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edited result 
-            res.render('movie/edit', {title: 'Edit Movie', movie: movieToEdit})
+            res.render('movie/add_edit', {title: 'Edit Movie', movie: movieToEdit})
         }
 
     });
@@ -105,12 +105,12 @@ module.exports.processEditPage = (req, res, next) => {
     // ADD YOUR CODE HERE
     let id = req.params.id;
     let updateMovie = Movie({
-        "_id": id,
-        "Title": req.body.Title,
-        "Synopsis":req.body.Synopsis,
-        "Year":req.body.Year,
-        "Director":req.body.Director,
-        "Genre":req.body.Genre
+        _id: id,
+        Title: req.body.Title,
+        Synopsis:req.body.Synopsis,
+        Year:req.body.Year,
+        Director:req.body.Director,
+        Genre:req.body.Genre
 
     });
     Movie.updateOne({_id: id}, updateMovie, (err) => {
